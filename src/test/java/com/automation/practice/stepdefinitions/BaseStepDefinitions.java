@@ -33,6 +33,9 @@ public class BaseStepDefinitions {
 		String baseURL = DataReader.getConfigData("baseURL");
 		scenarioName = scenario.getName();
 		System.out.println("Scenario Name: " + scenarioName);
+		for (String tag : scenario.getSourceTagNames()) {
+			System.out.println(tag);
+		}
 
 		if (browser.equalsIgnoreCase("IE") || browser.equalsIgnoreCase("Internet Explorer")) {
 			InternetExplorerOptions options = new InternetExplorerOptions();
